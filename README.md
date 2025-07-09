@@ -1,0 +1,1 @@
+# ec2-static-site-demo

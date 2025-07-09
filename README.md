@@ -69,8 +69,10 @@ scp -i your-key.pem -r /path/to/your/template/ ec2-user@<your-ec2-public-ip>:/ho
 ---
 
 ### 6. On EC2: Deploy Template to Apache Directory
-- sudo rm -rf /var/www/html/*
+```bash
+sudo rm -rf /var/www/html/*
 - sudo cp -r /tmp/template/* /var/www/html/
+```
 
 ---
 

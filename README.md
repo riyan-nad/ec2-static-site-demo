@@ -46,17 +46,16 @@ ssh -i your-key.pem ec2-user@<your-ec2-public-ip>
 ---
 
 ### 3. Install Apache
-Copy code
-sudo yum update -y
-sudo yum install httpd -y
-sudo systemctl start httpd
-sudo systemctl enable httpd
+- sudo yum update -y
+- sudo yum install httpd -y
+- sudo systemctl start httpd
+- sudo systemctl enable httpd
 
 ---
 
 ### 4. On Your Local Machine: Prepare Template
-Download a free HTML/CSS template (e.g., from HTML5 UP, Free CSS)
-Go to Command Prompt and use scp to Transfer files to EC2
+- Download a free HTML/CSS template (e.g., from HTML5 UP, Free CSS)
+- Go to Command Prompt and use scp to Transfer files to EC2
 ```bash
 scp -i your-key.pem -r /path/to/your/template/ ec2-user@<your-ec2-public-ip>:/home/ec2-user
 ```
@@ -64,16 +63,16 @@ scp -i your-key.pem -r /path/to/your/template/ ec2-user@<your-ec2-public-ip>:/ho
 ---
 
 ### 5. On your EC2 Instance:
-Extract the .zip file
-Navigate into the extracted folder
+- Extract the .zip file
+- Navigate into the extracted folder
 
 ---
 
 ### 6. On EC2: Deploy Template to Apache Directory
-sudo rm -rf /var/www/html/*
-sudo cp -r /tmp/template/* /var/www/html/
+- sudo rm -rf /var/www/html/*
+- sudo cp -r /tmp/template/* /var/www/html/
 
-
+---
 
 ### 7. Visit the Website
 Open your browser and go to:
@@ -81,8 +80,3 @@ Open your browser and go to:
 http://16.170.203.13
 
 ✅ You should see your static website live!
-
-   
-
-
-
